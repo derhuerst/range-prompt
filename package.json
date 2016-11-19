@@ -1,0 +1,14 @@
+{
+	"name":              "range-prompt",
+	"description":       "A prompt to select a value in a range.",
+	"version":           "0.1.0",
+	"main":              "index.js",
+	"files":             ["index.js"],
+	"keywords":          ["command", "line", "cli", "prompt", "range", "input"],
+	"author":            "Jannis R <mail@jannisr.de>",
+	"homepage":          "https://github.com/derhuerst/range-prompt",
+	"repository":        "derhuerst/range-prompt",
+	"bugs":              "https://github.com/derhuerst/range-prompt/issues",
+	"license":           "ISC",
+	"engines":           {"node": ">=6"}
+}

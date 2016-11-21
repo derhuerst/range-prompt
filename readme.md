@@ -1,6 +1,6 @@
 # range-prompt
 
-**A prompt to select an item from a tree.**
+**A prompt to select a value in a range.**
 
 [![asciicast](https://asciinema.org/a/92713.png)](https://asciinema.org/a/92713)
 
@@ -9,7 +9,7 @@
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/range-prompt.svg)](https://david-dm.org/derhuerst/range-prompt#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/range-prompt.svg)
 
-*range-prompt* uses [*cli-styles*](https://github.com/derhuerst/cli-styles) to have a look & feel consistent with other prompts.
+*range-prompt* uses [*prompt-skeleton*](https://github.com/derhuerst/prompt-skeleton) & [*cli-styles*](https://github.com/derhuerst/cli-styles) to have a look & feel consistent with other prompts.
 
 
 ## Installing
@@ -25,11 +25,11 @@ npm install range-prompt
 const rangePrompt = require('range-prompt')
 
 rangePrompt('How much ice cream would you like?', {
-	min: 0, max: 10, value: 2, unit: 'kg'
+	min: 0, max: 10, value: 2, step: .1, unit: 'kg'
 })
-.on('data', (item) => console.log('Changed to', item))
-.on('abort', (item) => console.log('Aborted with', item))
-.on('submit', (item) => console.log('Submitted with', item))
+.on('data', (item) => console.log('Changed to', item, 'kg'))
+.on('abort', (item) => console.log('You aborted, having chosen', item, 'kg'))
+.on('submit', (item) => console.log('You chose', item, 'kg'))
 ```
 
 

@@ -2,14 +2,14 @@
 
 **A prompt to select a value in a range.**
 
-[![asciicast](https://asciinema.org/a/92713.png)](https://asciinema.org/a/92713)
+[![asciicast](https://asciinema.org/a/93623.png)](https://asciinema.org/a/93623)
 
 [![npm version](https://img.shields.io/npm/v/range-prompt.svg)](https://www.npmjs.com/package/range-prompt)
 [![dependency status](https://img.shields.io/david/derhuerst/range-prompt.svg)](https://david-dm.org/derhuerst/range-prompt#info=dependencies)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/range-prompt.svg)](https://david-dm.org/derhuerst/range-prompt#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/range-prompt.svg)
 
-*range-prompt* uses [*prompt-skeleton*](https://github.com/derhuerst/prompt-skeleton) & [*cli-styles*](https://github.com/derhuerst/cli-styles) to have a look & feel consistent with other prompts.
+*range-prompt* uses [*cli-styles*](https://github.com/derhuerst/cli-styles) and [*prompt-skeleton*](https://github.com/derhuerst/prompt-skeleton) to have a look & feel consistent with [other prompts](https://github.com/derhuerst/prompt-skeleton#prompts-using-prompt-skeleton).
 
 
 ## Installing
@@ -35,14 +35,13 @@ rangePrompt('How much ice cream would you like?', {
 
 ## Related
 
-- [`mail-prompt`](https://github.com/derhuerst/mail-prompt)
 - [`date-prompt`](https://github.com/derhuerst/date-prompt)
-- [`number-prompt`](https://github.com/derhuerst/number-prompt)
-- [`range-prompt`](https://github.com/derhuerst/range-prompt)
-- [`select-prompt`](https://github.com/derhuerst/select-prompt)
+- [`mail-prompt`](https://github.com/derhuerst/mail-prompt)
 - [`multiselect-prompt`](https://github.com/derhuerst/multiselect-prompt)
-- [`tree-select-prompt`](https://github.com/derhuerst/tree-select-prompt)
+- [`number-prompt`](https://github.com/derhuerst/number-prompt)
+- [`select-prompt`](https://github.com/derhuerst/select-prompt)
 - [`text-prompt`](https://github.com/derhuerst/text-prompt)
+- [`tree-select-prompt`](https://github.com/derhuerst/tree-select-prompt)
 - [`cli-autocomplete`](https://github.com/derhuerst/cli-autocomplete)
 
 

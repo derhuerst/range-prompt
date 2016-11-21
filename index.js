@@ -17,7 +17,7 @@ const round = (x, n) => Math.round(x * Math.pow(10, n)) / Math.pow(10, n)
 const RangePrompt = {
 
 	  reset: function () {
-		// this.typed = ''
+		this.typed = ''
 		this.value = this.initialValue
 		this.emit()
 		this.render()
@@ -79,9 +79,9 @@ const RangePrompt = {
 
 
 
-	, render: function () {
+	, render: function (first) {
 		let out = ''
-		if (this.first) this.first = false
+		if (first) out += esc.cursorHide
 		else out += esc.eraseLines(2) + esc.cursorTo(0)
 
 		out += [
@@ -147,7 +147,6 @@ const rangePrompt = (msg, opt) => {
 
 	p.msg = msg
 	p.initialValue = p.value
-	p.first = true
 
 	return wrap(p)
 }

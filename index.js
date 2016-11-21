@@ -10,7 +10,7 @@ const wrap = require('prompt-skeleton')
 
 
 
-// const isNumber = /[0-9]/
+const isFloat = /[0-9\.]/
 
 const round = (x, n) => Math.round(x * Math.pow(10, n)) / Math.pow(10, n)
 
@@ -59,21 +59,23 @@ const RangePrompt = {
 
 
 
-	// , _: function (n) {
-	// 	if (!isNumber.test(n)) return this.bell()
+	, _: function (n) {
+		if (!isFloat.test(n)) return this.bell()
 
-	// 	const now = Date.now()
-	// 	if ((now - this.lastHit) > 1000) this.typed = '' // 1s elapsed
-	// 	this.typed += n
-	// 	this.lastHit = now
+		const now = Date.now()
+		if ((now - this.lastHit) > 1000) this.typed = '' // 1s elapsed
+		this.typed += n
+		this.lastHit = now
 
-	// 	this.value = Math.min(parseInt(this.typed), this.max)
-	// 	if (this.value > this.max) this.value = this.max
-	// 	if (this.value < this.min) this.value = this.min
+		const v = this.value = parseFloat(this.typed)
+		if (Number.isNaN(v)) return this.bell()
 
-	// 	this.emit()
-	// 	this.render()
-	// }
+		if (v > this.max) v = this.max
+		if (v < this.min) v = this.min
+
+		this.emit()
+		this.render()
+	}
 
 
 
@@ -124,6 +126,9 @@ const defaults = {
 	, values:  []
 	, value:   null
 	, unit:    ''
+
+	, typed:   ''
+	, lastHit: 0
 
 	, min:     0
 	, max:     100

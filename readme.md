@@ -8,6 +8,7 @@
 [![dependency status](https://img.shields.io/david/derhuerst/range-prompt.svg)](https://david-dm.org/derhuerst/range-prompt#info=dependencies)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/range-prompt.svg)](https://david-dm.org/derhuerst/range-prompt#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/range-prompt.svg)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
 *range-prompt* uses [*cli-styles*](https://github.com/derhuerst/cli-styles) and [*prompt-skeleton*](https://github.com/derhuerst/prompt-skeleton) to have a look & feel consistent with [other prompts](https://github.com/derhuerst/prompt-skeleton#prompts-using-prompt-skeleton).
 
@@ -43,6 +44,7 @@ rangePrompt('How much ice cream would you like?', {
 - [`text-prompt`](https://github.com/derhuerst/text-prompt)
 - [`tree-select-prompt`](https://github.com/derhuerst/tree-select-prompt)
 - [`cli-autocomplete`](https://github.com/derhuerst/cli-autocomplete)
+- [`switch-prompt`](https://github.com/derhuerst/switch-prompt)
 
 
 ## Contributing

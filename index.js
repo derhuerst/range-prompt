@@ -12,8 +12,6 @@ const wrap = require('prompt-skeleton')
 
 const isFloat = /[0-9\.]/
 
-const round = (x, n) => Math.round(x * Math.pow(10, n)) / Math.pow(10, n)
-
 const RangePrompt = {
 
 	  reset: function () {
@@ -45,14 +43,14 @@ const RangePrompt = {
 	, up: function () {
 		this.typed = ''
 		if (this.value >= this.max) return this.bell()
-		this.value = round(this.value += this.step, precision(this.step))
+		this.value = +(this.value + this.step).toFixed(precision(this.step))
 		this.emit()
 		this.render()
 	}
 	, down: function () {
 		this.typed = ''
 		if (this.value <= this.min) return this.bell()
-		this.value = round(this.value -= this.step, precision(this.step))
+		this.value = +(this.value - this.step).toFixed(precision(this.step))
 		this.emit()
 		this.render()
 	}
